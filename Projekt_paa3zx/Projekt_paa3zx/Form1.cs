@@ -23,7 +23,9 @@ namespace Projekt_paa3zx
         {
             InitializeComponent();
             dateTimePickerkezdo.MaxDate = DateTime.Today.AddDays(-1);
+            dateTimePickerkezdo.MinDate = DateTime.Today.AddYears(-1);
             dateTimePickerveg.MaxDate = DateTime.Today.AddDays(-1);
+            dateTimePickerveg.MinDate = DateTime.Today.AddYears(-1);
 
             GetCurrencies();
             RefreshData();
@@ -35,8 +37,22 @@ namespace Projekt_paa3zx
         {
             Rates.Clear();
             comboBox1.DataSource = Currencies;
-            dataGridView1.DataSource = Rates;
+            dataGridView1.DataSource = Rates;           
+            ArfolyamChart.DataSource = Rates;
             ExchangeData();
+
+            //chart
+            var series = ArfolyamChart.Series[0];
+            series.ChartType = SeriesChartType.Line;
+            series.XValueMember = "Date";
+            series.YValueMembers = "Value";
+            series.BorderWidth = 2;
+            series.IsVisibleInLegend = false ;
+
+
+            var chartArea = ArfolyamChart.ChartAreas[0];
+            chartArea.AxisX.MajorGrid.Enabled = false;
+            chartArea.AxisY.IsStartedFromZero = false;
 
         }
         //arfolyamok meghivasa
@@ -77,23 +93,7 @@ namespace Projekt_paa3zx
                     rate.Value = value / unit;
 
             }
-
-
-            //chart
-            ArfolyamChart.DataSource = Rates;
-
-            var series = ArfolyamChart.Series[0];
-            series.ChartType = SeriesChartType.Line;
-            series.XValueMember = "Date";
-            series.YValueMembers = "Value";
-            series.BorderWidth = 2;
-
-            var legend = ArfolyamChart.Legends[0];
-            legend.Enabled = false;
-
-            var chartArea = ArfolyamChart.ChartAreas[0];
-            chartArea.AxisX.MajorGrid.Enabled = false;
-            chartArea.AxisY.IsStartedFromZero = false;
+           
 
         }
 
@@ -175,79 +175,53 @@ namespace Projekt_paa3zx
                 textBoxmax.Text = max.ToString();
                 decimal min = (from elem in Rates select elem.Value).Min();
                 textBoxmin.Text = min.ToString();
+
+
                 decimal elso = (from elem in Rates select elem.Value).First();
                 decimal uccso = (from elem in Rates select elem.Value).Last();
                 textBoxelso.Text = elso.ToString();
                 textBoxutolso.Text = uccso.ToString();
+
+
                 decimal valtozas = ((elso / uccso) - 1) * 100;
                 textBoxvaltozas.Text = String.Format("{0:N2}", valtozas) + " %";
 
+                tbvalto.Text = elso.ToString();
+
+
+                //szinezes
                 int ertek = Convert.ToInt32(e.Value);
                 if (ertek < atlag)
                 {
-                    e.CellStyle.BackColor = Color.Green;
+                    e.CellStyle.BackColor = Color.LightGreen;
                 }
                 if (ertek > atlag)
                 {
                     e.CellStyle.BackColor = Color.Red;
                 }
+                if (valtozas>0)
+                {
+                    textBoxvaltozas.BackColor = Color.Red;
+                }
+                if (valtozas < 0)
+                {
+                    textBoxvaltozas.BackColor = Color.LightGreen;
+                }
             }
 
+        }
+        //valtas
+        private void Tbszam_TextChanged(object sender, EventArgs e)
+        {
+            
 
-
-
-
-            /* private void DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-             {
-                 if (e.ColumnIndex == 2 && Convert.ToInt32(e.Value) != 0)
-                 {
-                     decimal nemtudom = (from elem in rates select elem.Value).Sum();
-                     decimal db = dataGridView1.Rows.Count - 1;
-                     decimal atlag = nemtudom / db;
-                     textBox1.Text = String.Format("{0:N2}", atlag);
-
-                     decimal max = (from elem in rates select elem.Value).Max();
-                     textBox2.Text = max.ToString();
-                     decimal min = (from elem in rates select elem.Value).Min();
-                     textBox3.Text = min.ToString();
-                     decimal elso = (from elem in rates select elem.Value).First();
-                     decimal uccso = (from elem in rates select elem.Value).Last();
-                     textBox4.Text = elso.ToString();
-                     textBox5.Text = uccso.ToString();
-                     decimal valtozas = ((elso / uccso) - 1) * 100;
-                     textBox6.Text = String.Format("{0:N2}", valtozas) + " %";
-                     if (valtozas > 0)
-                     {
-                         label1.Text = "emelkedés";
-                     }
-                     if (valtozas < 0)
-                     {
-                         label1.Text = "csökkenés";
-                     }
-                     label2.Text = dateTimePicker2.Value.ToString("yyyy.MM.dd.");
-                     label3.Text = dateTimePicker1.Value.ToString("yyyy.MM.dd.");
-
-
-
-                     int quantity = Convert.ToInt32(e.Value);
-                     if (quantity < atlag)
-                     {
-                         e.CellStyle.BackColor = Color.Green;
-                     }
-                     if (quantity > atlag)
-                     {
-                         e.CellStyle.BackColor = Color.Red;
-                     }
-                 }*/
-
-
-
-
-
-
-
-
-
+            if (tbszam.Text != null)
+            {
+                decimal szam = Convert.ToDecimal(tbszam.Text);
+                decimal elso = Convert.ToDecimal(tbvalto.Text);
+                decimal valtas = elso * szam;
+                eredmeny.Text = valtas.ToString();
+            }
 
         }
     }
