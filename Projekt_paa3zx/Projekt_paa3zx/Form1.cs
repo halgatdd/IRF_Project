@@ -33,6 +33,8 @@ namespace Projekt_paa3zx
             timer4.Enabled = false;
             timer5.Enabled = false;
             timer6.Enabled = false;
+            timer7.Enabled = true;
+            timer7.Start();
 
             timer1.Interval = 2000;
             timer2.Interval = 4000;
@@ -187,6 +189,10 @@ namespace Projekt_paa3zx
                 ArfolyamChart.Visible = true;
                 dataGridView2.Visible = true;
                 dataGridView3.Visible = true;
+                labelKiug.Visible = true;
+                labelKiugro.Visible = true;
+                labelMagas.Visible = true;
+                labelAlacsony.Visible = true;
 
                 decimal osszegzes = (from elem in Rates select elem.Value).Sum();
                 decimal db = dataGridView1.Rows.Count;
@@ -277,6 +283,10 @@ namespace Projekt_paa3zx
                 ArfolyamChart.Visible = false;
                 dataGridView2.Visible = false;
                 dataGridView3.Visible = false;
+                labelKiug.Visible = false;
+                labelKiugro.Visible = false;
+                labelMagas.Visible = false;
+                labelAlacsony.Visible = false;
             }
 
         }
@@ -333,6 +343,7 @@ namespace Projekt_paa3zx
             timer4.Start();
             timer5.Start();
             timer6.Start();
+            
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -370,6 +381,11 @@ namespace Projekt_paa3zx
         {
             labelvaltozas.Visible = true;
             textBoxvaltozas.Visible = true;
+        }
+
+        private void Timer7_Tick(object sender, EventArgs e)
+        {
+            labelIdo.Text = DateTime.Now.ToString("yyyy.MM.dd HH:mm:ss");
         }
     }
 }
