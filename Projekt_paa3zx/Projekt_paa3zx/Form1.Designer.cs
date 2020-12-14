@@ -29,27 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dateTimePickerkezdo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerveg = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Exportgomb = new System.Windows.Forms.Button();
-            this.ArfolyamChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.labelatlag = new System.Windows.Forms.Label();
             this.labelmax = new System.Windows.Forms.Label();
             this.labelmin = new System.Windows.Forms.Label();
             this.labelvaltozas = new System.Windows.Forms.Label();
             this.labelutolso = new System.Windows.Forms.Label();
             this.labelelso = new System.Windows.Forms.Label();
-            this.textBoxtlag = new System.Windows.Forms.TextBox();
-            this.textBoxmax = new System.Windows.Forms.TextBox();
-            this.textBoxelso = new System.Windows.Forms.TextBox();
-            this.textBoxmin = new System.Windows.Forms.TextBox();
-            this.textBoxvaltozas = new System.Windows.Forms.TextBox();
-            this.textBoxutolso = new System.Windows.Forms.TextBox();
             this.labelszamok = new System.Windows.Forms.Label();
             this.labelValto1 = new System.Windows.Forms.Label();
             this.tbvalto = new System.Windows.Forms.TextBox();
@@ -62,8 +54,6 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,36 +65,28 @@
             this.labelKiugro = new System.Windows.Forms.Label();
             this.timer7 = new System.Windows.Forms.Timer(this.components);
             this.labelIdo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ArfolyamChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridView1 = new Projekt_paa3zx.DGV();
+            this.dataGridView2 = new Projekt_paa3zx.DGV();
+            this.dataGridView3 = new Projekt_paa3zx.DGV();
+            this.textBoxtlag = new Projekt_paa3zx.Tbs();
+            this.textBoxmax = new Projekt_paa3zx.Tbs();
+            this.textBoxmin = new Projekt_paa3zx.Tbs();
+            this.textBoxelso = new Projekt_paa3zx.Tbs();
+            this.textBoxutolso = new Projekt_paa3zx.Tbs();
+            this.textBoxvaltozas = new Projekt_paa3zx.Tbs();
             ((System.ComponentModel.ISupportInitialize)(this.ArfolyamChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(186, -1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(339, 885);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGridView1_CellFormatting);
             // 
             // dateTimePickerkezdo
             // 
             this.dateTimePickerkezdo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerkezdo.Location = new System.Drawing.Point(9, 96);
             this.dateTimePickerkezdo.Name = "dateTimePickerkezdo";
-            this.dateTimePickerkezdo.Size = new System.Drawing.Size(121, 26);
+            this.dateTimePickerkezdo.Size = new System.Drawing.Size(121, 22);
             this.dateTimePickerkezdo.TabIndex = 1;
             this.dateTimePickerkezdo.Value = new System.DateTime(2020, 1, 10, 13, 32, 0, 0);
             this.dateTimePickerkezdo.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
@@ -114,7 +96,7 @@
             this.dateTimePickerveg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerveg.Location = new System.Drawing.Point(9, 189);
             this.dateTimePickerveg.Name = "dateTimePickerveg";
-            this.dateTimePickerveg.Size = new System.Drawing.Size(121, 26);
+            this.dateTimePickerveg.Size = new System.Drawing.Size(121, 22);
             this.dateTimePickerveg.TabIndex = 2;
             this.dateTimePickerveg.Value = new System.DateTime(2020, 12, 1, 13, 32, 0, 0);
             this.dateTimePickerveg.ValueChanged += new System.EventHandler(this.DateTimePicker2_ValueChanged);
@@ -124,14 +106,14 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 268);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(77, 28);
+            this.comboBox1.Size = new System.Drawing.Size(77, 24);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // Exportgomb
             // 
             this.Exportgomb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Exportgomb.Location = new System.Drawing.Point(15, 815);
+            this.Exportgomb.Location = new System.Drawing.Point(15, 992);
             this.Exportgomb.Name = "Exportgomb";
             this.Exportgomb.Size = new System.Drawing.Size(107, 42);
             this.Exportgomb.TabIndex = 4;
@@ -139,32 +121,13 @@
             this.Exportgomb.UseVisualStyleBackColor = true;
             this.Exportgomb.Click += new System.EventHandler(this.Exportgomb_Click);
             // 
-            // ArfolyamChart
-            // 
-            this.ArfolyamChart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ArfolyamChart.BackColor = System.Drawing.SystemColors.ButtonFace;
-            chartArea1.Name = "ChartArea1";
-            this.ArfolyamChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ArfolyamChart.Legends.Add(legend1);
-            this.ArfolyamChart.Location = new System.Drawing.Point(821, -1);
-            this.ArfolyamChart.Name = "ArfolyamChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ArfolyamChart.Series.Add(series1);
-            this.ArfolyamChart.Size = new System.Drawing.Size(971, 297);
-            this.ArfolyamChart.TabIndex = 5;
-            this.ArfolyamChart.Text = "chart1";
-            // 
             // labelatlag
             // 
             this.labelatlag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelatlag.AutoSize = true;
-            this.labelatlag.Location = new System.Drawing.Point(1649, 646);
+            this.labelatlag.Location = new System.Drawing.Point(1614, 821);
             this.labelatlag.Name = "labelatlag";
-            this.labelatlag.Size = new System.Drawing.Size(52, 20);
+            this.labelatlag.Size = new System.Drawing.Size(44, 16);
             this.labelatlag.TabIndex = 6;
             this.labelatlag.Text = "Átlag";
             // 
@@ -172,9 +135,9 @@
             // 
             this.labelmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelmax.AutoSize = true;
-            this.labelmax.Location = new System.Drawing.Point(1560, 675);
+            this.labelmax.Location = new System.Drawing.Point(1525, 850);
             this.labelmax.Name = "labelmax";
-            this.labelmax.Size = new System.Drawing.Size(157, 20);
+            this.labelmax.Size = new System.Drawing.Size(134, 16);
             this.labelmax.TabIndex = 7;
             this.labelmax.Text = "Legnagyobb érték";
             // 
@@ -182,9 +145,9 @@
             // 
             this.labelmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelmin.AutoSize = true;
-            this.labelmin.Location = new System.Drawing.Point(1533, 703);
+            this.labelmin.Location = new System.Drawing.Point(1498, 878);
             this.labelmin.Name = "labelmin";
-            this.labelmin.Size = new System.Drawing.Size(192, 20);
+            this.labelmin.Size = new System.Drawing.Size(163, 16);
             this.labelmin.TabIndex = 8;
             this.labelmin.Text = "Legalacsonyabb érték";
             // 
@@ -192,9 +155,9 @@
             // 
             this.labelvaltozas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelvaltozas.AutoSize = true;
-            this.labelvaltozas.Location = new System.Drawing.Point(1569, 815);
+            this.labelvaltozas.Location = new System.Drawing.Point(1534, 990);
             this.labelvaltozas.Name = "labelvaltozas";
-            this.labelvaltozas.Size = new System.Drawing.Size(154, 20);
+            this.labelvaltozas.Size = new System.Drawing.Size(128, 16);
             this.labelvaltozas.TabIndex = 11;
             this.labelvaltozas.Text = "Időszaki változás";
             // 
@@ -202,9 +165,9 @@
             // 
             this.labelutolso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelutolso.AutoSize = true;
-            this.labelutolso.Location = new System.Drawing.Point(1569, 787);
+            this.labelutolso.Location = new System.Drawing.Point(1534, 962);
             this.labelutolso.Name = "labelutolso";
-            this.labelutolso.Size = new System.Drawing.Size(150, 20);
+            this.labelutolso.Size = new System.Drawing.Size(127, 16);
             this.labelutolso.TabIndex = 10;
             this.labelutolso.Text = "Legrégebbi érték";
             // 
@@ -212,91 +175,19 @@
             // 
             this.labelelso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelelso.AutoSize = true;
-            this.labelelso.Location = new System.Drawing.Point(1569, 755);
+            this.labelelso.Location = new System.Drawing.Point(1534, 930);
             this.labelelso.Name = "labelelso";
-            this.labelelso.Size = new System.Drawing.Size(149, 20);
+            this.labelelso.Size = new System.Drawing.Size(126, 16);
             this.labelelso.TabIndex = 9;
             this.labelelso.Text = "Legkorábbi érték";
-            // 
-            // textBoxtlag
-            // 
-            this.textBoxtlag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxtlag.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxtlag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxtlag.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxtlag.Location = new System.Drawing.Point(1699, 640);
-            this.textBoxtlag.Name = "textBoxtlag";
-            this.textBoxtlag.ReadOnly = true;
-            this.textBoxtlag.Size = new System.Drawing.Size(80, 26);
-            this.textBoxtlag.TabIndex = 12;
-            // 
-            // textBoxmax
-            // 
-            this.textBoxmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxmax.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxmax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxmax.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxmax.Location = new System.Drawing.Point(1699, 669);
-            this.textBoxmax.Name = "textBoxmax";
-            this.textBoxmax.ReadOnly = true;
-            this.textBoxmax.Size = new System.Drawing.Size(80, 26);
-            this.textBoxmax.TabIndex = 13;
-            // 
-            // textBoxelso
-            // 
-            this.textBoxelso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxelso.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxelso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxelso.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxelso.Location = new System.Drawing.Point(1699, 749);
-            this.textBoxelso.Name = "textBoxelso";
-            this.textBoxelso.ReadOnly = true;
-            this.textBoxelso.Size = new System.Drawing.Size(80, 26);
-            this.textBoxelso.TabIndex = 15;
-            // 
-            // textBoxmin
-            // 
-            this.textBoxmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxmin.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxmin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxmin.Location = new System.Drawing.Point(1699, 697);
-            this.textBoxmin.Name = "textBoxmin";
-            this.textBoxmin.ReadOnly = true;
-            this.textBoxmin.Size = new System.Drawing.Size(80, 26);
-            this.textBoxmin.TabIndex = 14;
-            // 
-            // textBoxvaltozas
-            // 
-            this.textBoxvaltozas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxvaltozas.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxvaltozas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxvaltozas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxvaltozas.Location = new System.Drawing.Point(1699, 809);
-            this.textBoxvaltozas.Name = "textBoxvaltozas";
-            this.textBoxvaltozas.ReadOnly = true;
-            this.textBoxvaltozas.Size = new System.Drawing.Size(80, 26);
-            this.textBoxvaltozas.TabIndex = 17;
-            // 
-            // textBoxutolso
-            // 
-            this.textBoxutolso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxutolso.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxutolso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxutolso.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxutolso.Location = new System.Drawing.Point(1699, 781);
-            this.textBoxutolso.Name = "textBoxutolso";
-            this.textBoxutolso.ReadOnly = true;
-            this.textBoxutolso.Size = new System.Drawing.Size(80, 26);
-            this.textBoxutolso.TabIndex = 16;
             // 
             // labelszamok
             // 
             this.labelszamok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelszamok.AutoSize = true;
-            this.labelszamok.Location = new System.Drawing.Point(1489, 616);
+            this.labelszamok.Location = new System.Drawing.Point(1454, 791);
             this.labelszamok.Name = "labelszamok";
-            this.labelszamok.Size = new System.Drawing.Size(367, 20);
+            this.labelszamok.Size = new System.Drawing.Size(303, 16);
             this.labelszamok.TabIndex = 18;
             this.labelszamok.Text = "A kiválasztott időszakra vonatkozó adatok:";
             // 
@@ -304,9 +195,9 @@
             // 
             this.labelValto1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelValto1.AutoSize = true;
-            this.labelValto1.Location = new System.Drawing.Point(1113, 621);
+            this.labelValto1.Location = new System.Drawing.Point(1092, 797);
             this.labelValto1.Name = "labelValto1";
-            this.labelValto1.Size = new System.Drawing.Size(52, 20);
+            this.labelValto1.Size = new System.Drawing.Size(44, 16);
             this.labelValto1.TabIndex = 19;
             this.labelValto1.Text = "Váltó";
             // 
@@ -316,10 +207,10 @@
             this.tbvalto.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.tbvalto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tbvalto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbvalto.Location = new System.Drawing.Point(1174, 669);
+            this.tbvalto.Location = new System.Drawing.Point(1153, 844);
             this.tbvalto.Name = "tbvalto";
             this.tbvalto.ReadOnly = true;
-            this.tbvalto.Size = new System.Drawing.Size(80, 26);
+            this.tbvalto.Size = new System.Drawing.Size(80, 22);
             this.tbvalto.TabIndex = 20;
             // 
             // label1
@@ -327,18 +218,18 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(1113, 637);
+            this.label1.Location = new System.Drawing.Point(1092, 813);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(482, 20);
+            this.label1.Size = new System.Drawing.Size(337, 16);
             this.label1.TabIndex = 21;
-            this.label1.Text = "(A váltó a jelenleg kijelölt időszak utolsó időpontját veszi alapul)";
+            this.label1.Text = "(Jelenlegi kijelölt időszak utolsó időpontját veszi alapul)";
             // 
             // tbszam
             // 
             this.tbszam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbszam.Location = new System.Drawing.Point(1174, 703);
+            this.tbszam.Location = new System.Drawing.Point(1153, 879);
             this.tbszam.Name = "tbszam";
-            this.tbszam.Size = new System.Drawing.Size(80, 26);
+            this.tbszam.Size = new System.Drawing.Size(80, 22);
             this.tbszam.TabIndex = 22;
             this.tbszam.Text = "0";
             this.tbszam.TextChanged += new System.EventHandler(this.Tbszam_TextChanged);
@@ -346,10 +237,10 @@
             // eredmeny
             // 
             this.eredmeny.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.eredmeny.Location = new System.Drawing.Point(1174, 749);
+            this.eredmeny.Location = new System.Drawing.Point(1153, 925);
             this.eredmeny.Name = "eredmeny";
             this.eredmeny.ReadOnly = true;
-            this.eredmeny.Size = new System.Drawing.Size(80, 26);
+            this.eredmeny.Size = new System.Drawing.Size(80, 22);
             this.eredmeny.TabIndex = 23;
             // 
             // timer1
@@ -376,47 +267,11 @@
             // 
             this.timer6.Tick += new System.EventHandler(this.Timer6_Tick);
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(531, 373);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(283, 511);
-            this.dataGridView2.TabIndex = 24;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(820, 373);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(287, 511);
-            this.dataGridView3.TabIndex = 25;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(570, 324);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 26;
             this.textBox1.Visible = false;
             // 
@@ -424,7 +279,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(820, 324);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 27;
             this.textBox2.Visible = false;
             // 
@@ -433,7 +288,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 20);
+            this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 28;
             this.label2.Text = "Kezdő dátum";
             // 
@@ -442,7 +297,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(5, 170);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 20);
+            this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "Záró dátum";
             // 
@@ -451,7 +306,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(8, 249);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.Size = new System.Drawing.Size(71, 16);
             this.label4.TabIndex = 30;
             this.label4.Text = "Pénznem";
             // 
@@ -460,9 +315,9 @@
             this.labelMagas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelMagas.AutoSize = true;
-            this.labelMagas.Location = new System.Drawing.Point(570, 349);
+            this.labelMagas.Location = new System.Drawing.Point(506, 368);
             this.labelMagas.Name = "labelMagas";
-            this.labelMagas.Size = new System.Drawing.Size(64, 20);
+            this.labelMagas.Size = new System.Drawing.Size(55, 16);
             this.labelMagas.TabIndex = 31;
             this.labelMagas.Text = "Magas";
             // 
@@ -471,9 +326,9 @@
             this.labelAlacsony.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelAlacsony.AutoSize = true;
-            this.labelAlacsony.Location = new System.Drawing.Point(817, 349);
+            this.labelAlacsony.Location = new System.Drawing.Point(814, 368);
             this.labelAlacsony.Name = "labelAlacsony";
-            this.labelAlacsony.Size = new System.Drawing.Size(85, 20);
+            this.labelAlacsony.Size = new System.Drawing.Size(72, 16);
             this.labelAlacsony.TabIndex = 32;
             this.labelAlacsony.Text = "Alacsony";
             // 
@@ -482,9 +337,9 @@
             this.labelKiug.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelKiug.AutoSize = true;
-            this.labelKiug.Location = new System.Drawing.Point(567, 302);
+            this.labelKiug.Location = new System.Drawing.Point(564, 321);
             this.labelKiug.Name = "labelKiug";
-            this.labelKiug.Size = new System.Drawing.Size(130, 20);
+            this.labelKiug.Size = new System.Drawing.Size(108, 16);
             this.labelKiug.TabIndex = 33;
             this.labelKiug.Text = "Kiugró értékek";
             // 
@@ -494,9 +349,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelKiugro.AutoSize = true;
             this.labelKiugro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelKiugro.Location = new System.Drawing.Point(570, 321);
+            this.labelKiugro.Location = new System.Drawing.Point(567, 340);
             this.labelKiugro.Name = "labelKiugro";
-            this.labelKiugro.Size = new System.Drawing.Size(368, 20);
+            this.labelKiugro.Size = new System.Drawing.Size(296, 16);
             this.labelKiugro.TabIndex = 34;
             this.labelKiugro.Text = "(Kijelölt időszakban 5%-ot meghaladó eltérések)";
             // 
@@ -507,18 +362,158 @@
             // labelIdo
             // 
             this.labelIdo.AutoSize = true;
+            this.labelIdo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelIdo.Location = new System.Drawing.Point(5, -1);
             this.labelIdo.Name = "labelIdo";
-            this.labelIdo.Size = new System.Drawing.Size(34, 20);
+            this.labelIdo.Size = new System.Drawing.Size(30, 16);
             this.labelIdo.TabIndex = 35;
             this.labelIdo.Text = "Ido";
             // 
+            // ArfolyamChart
+            // 
+            this.ArfolyamChart.BackColor = System.Drawing.Color.Transparent;
+            chartArea3.Name = "ChartArea1";
+            this.ArfolyamChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.ArfolyamChart.Legends.Add(legend3);
+            this.ArfolyamChart.Location = new System.Drawing.Point(570, 13);
+            this.ArfolyamChart.Name = "ArfolyamChart";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.ArfolyamChart.Series.Add(series3);
+            this.ArfolyamChart.Size = new System.Drawing.Size(1222, 300);
+            this.ArfolyamChart.TabIndex = 37;
+            this.ArfolyamChart.Text = "chart1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(156, -1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(344, 1062);
+            this.dataGridView1.TabIndex = 38;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGridView1_CellFormatting_1);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(506, 386);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(292, 663);
+            this.dataGridView2.TabIndex = 39;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(804, 386);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.Size = new System.Drawing.Size(292, 663);
+            this.dataGridView3.TabIndex = 40;
+            // 
+            // textBoxtlag
+            // 
+            this.textBoxtlag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxtlag.BackColor = System.Drawing.Color.Black;
+            this.textBoxtlag.ForeColor = System.Drawing.Color.White;
+            this.textBoxtlag.Location = new System.Drawing.Point(1668, 821);
+            this.textBoxtlag.Name = "textBoxtlag";
+            this.textBoxtlag.ReadOnly = true;
+            this.textBoxtlag.Size = new System.Drawing.Size(100, 22);
+            this.textBoxtlag.TabIndex = 41;
+            // 
+            // textBoxmax
+            // 
+            this.textBoxmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxmax.BackColor = System.Drawing.Color.Black;
+            this.textBoxmax.ForeColor = System.Drawing.Color.White;
+            this.textBoxmax.Location = new System.Drawing.Point(1668, 847);
+            this.textBoxmax.Name = "textBoxmax";
+            this.textBoxmax.ReadOnly = true;
+            this.textBoxmax.Size = new System.Drawing.Size(100, 22);
+            this.textBoxmax.TabIndex = 42;
+            // 
+            // textBoxmin
+            // 
+            this.textBoxmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxmin.BackColor = System.Drawing.Color.Black;
+            this.textBoxmin.ForeColor = System.Drawing.Color.White;
+            this.textBoxmin.Location = new System.Drawing.Point(1668, 875);
+            this.textBoxmin.Name = "textBoxmin";
+            this.textBoxmin.ReadOnly = true;
+            this.textBoxmin.Size = new System.Drawing.Size(100, 22);
+            this.textBoxmin.TabIndex = 43;
+            // 
+            // textBoxelso
+            // 
+            this.textBoxelso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxelso.BackColor = System.Drawing.Color.Black;
+            this.textBoxelso.ForeColor = System.Drawing.Color.White;
+            this.textBoxelso.Location = new System.Drawing.Point(1668, 927);
+            this.textBoxelso.Name = "textBoxelso";
+            this.textBoxelso.ReadOnly = true;
+            this.textBoxelso.Size = new System.Drawing.Size(100, 22);
+            this.textBoxelso.TabIndex = 44;
+            // 
+            // textBoxutolso
+            // 
+            this.textBoxutolso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxutolso.BackColor = System.Drawing.Color.Black;
+            this.textBoxutolso.ForeColor = System.Drawing.Color.White;
+            this.textBoxutolso.Location = new System.Drawing.Point(1668, 956);
+            this.textBoxutolso.Name = "textBoxutolso";
+            this.textBoxutolso.ReadOnly = true;
+            this.textBoxutolso.Size = new System.Drawing.Size(100, 22);
+            this.textBoxutolso.TabIndex = 45;
+            // 
+            // textBoxvaltozas
+            // 
+            this.textBoxvaltozas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxvaltozas.BackColor = System.Drawing.Color.White;
+            this.textBoxvaltozas.ForeColor = System.Drawing.Color.Black;
+            this.textBoxvaltozas.Location = new System.Drawing.Point(1668, 987);
+            this.textBoxvaltozas.Name = "textBoxvaltozas";
+            this.textBoxvaltozas.ReadOnly = true;
+            this.textBoxvaltozas.Size = new System.Drawing.Size(100, 22);
+            this.textBoxvaltozas.TabIndex = 46;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1792, 884);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1792, 1061);
+            this.Controls.Add(this.textBoxvaltozas);
+            this.Controls.Add(this.textBoxutolso);
+            this.Controls.Add(this.textBoxelso);
+            this.Controls.Add(this.textBoxmin);
+            this.Controls.Add(this.textBoxmax);
+            this.Controls.Add(this.textBoxtlag);
+            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ArfolyamChart);
             this.Controls.Add(this.labelIdo);
             this.Controls.Add(this.labelKiugro);
             this.Controls.Add(this.labelKiug);
@@ -529,39 +524,29 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.eredmeny);
             this.Controls.Add(this.tbszam);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbvalto);
             this.Controls.Add(this.labelValto1);
             this.Controls.Add(this.labelszamok);
-            this.Controls.Add(this.textBoxvaltozas);
-            this.Controls.Add(this.textBoxutolso);
-            this.Controls.Add(this.textBoxelso);
-            this.Controls.Add(this.textBoxmin);
-            this.Controls.Add(this.textBoxmax);
-            this.Controls.Add(this.textBoxtlag);
             this.Controls.Add(this.labelvaltozas);
             this.Controls.Add(this.labelutolso);
             this.Controls.Add(this.labelelso);
             this.Controls.Add(this.labelmin);
             this.Controls.Add(this.labelmax);
             this.Controls.Add(this.labelatlag);
-            this.Controls.Add(this.ArfolyamChart);
             this.Controls.Add(this.Exportgomb);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePickerveg);
             this.Controls.Add(this.dateTimePickerkezdo);
-            this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Form1";
             this.Text = "Árfolyamelemző";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArfolyamChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
@@ -570,25 +555,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePickerkezdo;
         private System.Windows.Forms.DateTimePicker dateTimePickerveg;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button Exportgomb;
-        private System.Windows.Forms.DataVisualization.Charting.Chart ArfolyamChart;
         private System.Windows.Forms.Label labelatlag;
         private System.Windows.Forms.Label labelmax;
         private System.Windows.Forms.Label labelmin;
         private System.Windows.Forms.Label labelvaltozas;
         private System.Windows.Forms.Label labelutolso;
         private System.Windows.Forms.Label labelelso;
-        private System.Windows.Forms.TextBox textBoxtlag;
-        private System.Windows.Forms.TextBox textBoxmax;
-        private System.Windows.Forms.TextBox textBoxelso;
-        private System.Windows.Forms.TextBox textBoxmin;
-        private System.Windows.Forms.TextBox textBoxvaltozas;
-        private System.Windows.Forms.TextBox textBoxutolso;
         private System.Windows.Forms.Label labelszamok;
         private System.Windows.Forms.Label labelValto1;
         private System.Windows.Forms.TextBox tbvalto;
@@ -601,8 +577,6 @@
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Timer timer6;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
@@ -614,6 +588,16 @@
         private System.Windows.Forms.Label labelKiugro;
         private System.Windows.Forms.Timer timer7;
         private System.Windows.Forms.Label labelIdo;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ArfolyamChart;
+        private DGV dataGridView1;
+        private DGV dataGridView2;
+        private DGV dataGridView3;
+        private Tbs textBoxtlag;
+        private Tbs textBoxmax;
+        private Tbs textBoxmin;
+        private Tbs textBoxelso;
+        private Tbs textBoxutolso;
+        private Tbs textBoxvaltozas;
     }
 }
 

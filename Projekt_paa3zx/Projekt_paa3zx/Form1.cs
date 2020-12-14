@@ -19,8 +19,10 @@ namespace Projekt_paa3zx
         BindingList<Adatok> Rates = new BindingList<Adatok>();
         BindingList<string> Currencies = new BindingList<string>();
 
+
         public Form1()
         {
+
             InitializeComponent();
             dateTimePickerkezdo.MaxDate = DateTime.Today.AddDays(-1);
             dateTimePickerkezdo.MinDate = DateTime.Today.AddYears(-1);
@@ -42,8 +44,7 @@ namespace Projekt_paa3zx
             timer4.Interval = 8000;
             timer5.Interval = 10000;
             timer6.Interval = 12000;
-            panelka p = new panelka();
-            Controls.Add(p);
+
             GetCurrencies();
             RefreshData();
         }
@@ -181,116 +182,7 @@ namespace Projekt_paa3zx
                 }
             }
         }
-        //szamolas
-        private void DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.ColumnIndex == 2 && Convert.ToInt32(e.Value) != 0)
-            {
-                tbszam.ReadOnly = false;
-                ArfolyamChart.Visible = true;
-                dataGridView2.Visible = true;
-                dataGridView3.Visible = true;
-                labelKiug.Visible = true;
-                labelKiugro.Visible = true;
-                labelMagas.Visible = true;
-                labelAlacsony.Visible = true;
 
-                decimal osszegzes = (from elem in Rates select elem.Value).Sum();
-                decimal db = dataGridView1.Rows.Count;
-                decimal atlag = osszegzes / db;
-                textBoxtlag.Text = String.Format("{0:N2}", atlag);
-
-                decimal max = (from elem in Rates select elem.Value).Max();
-                textBoxmax.Text = max.ToString();
-                decimal min = (from elem in Rates select elem.Value).Min();
-                textBoxmin.Text = min.ToString();
-
-
-                decimal elso = (from elem in Rates select elem.Value).First();
-                decimal uccso = (from elem in Rates select elem.Value).Last();
-                textBoxelso.Text = elso.ToString();
-                textBoxutolso.Text = uccso.ToString();
-
-
-                decimal valtozas = ((elso / uccso) - 1) * 100;
-                textBoxvaltozas.Text = String.Format("{0:N2}", valtozas) + " %";
-
-                tbvalto.Text = elso.ToString();
-
-
-                //szinezes
-                int ertek = Convert.ToInt32(e.Value);
-                if (ertek < atlag)
-                {
-                    e.CellStyle.BackColor = Color.LightGreen;
-                }
-                if (ertek > atlag)
-                {
-                    e.CellStyle.BackColor = Color.Red;
-                }
-                if (valtozas>0)
-                {
-                    textBoxvaltozas.BackColor = Color.Red;
-                }
-                if (valtozas < 0)
-                {
-                    textBoxvaltozas.BackColor = Color.LightGreen;
-                }
-
-                //kiugro ertekek vizsgalata
-                double szorzo = 1.05;
-                decimal kiugromagas = atlag * Convert.ToDecimal(szorzo);
-                decimal kiugroalacsony = atlag / Convert.ToDecimal(szorzo);
-                textBox1.Text = kiugromagas.ToString();
-                textBox2.Text = kiugroalacsony.ToString();
-
-                var masik = (from elem in Rates
-                             where
-                             elem.Value > kiugromagas
-                             select elem).ToList();
-                var harmadik = (from elem in Rates
-                                where
-                                 elem.Value < kiugroalacsony
-                                select elem).ToList();
-                dataGridView2.DataSource = masik;
-                dataGridView3.DataSource = harmadik;
-                if (dataGridView2.Rows.Count ==0)
-                {
-                    dataGridView2.Visible = false;
-                }
-                if (dataGridView3.Rows.Count == 0)
-                {
-                    dataGridView3.Visible = false;
-                }
-                if (dateTimePickerkezdo.Value >= dateTimePickerveg.Value)
-                {
-                    ArfolyamChart.Visible = false;
-                }
-            }
-
-
-            //hibakezeles
-            if (e.ColumnIndex == 2 && Convert.ToInt32(e.Value) == 0)
-            {
-
-                textBoxtlag.Text = "nincs adat";
-                textBoxmax.Text = "nincs adat";
-                textBoxmin.Text = "nincs adat";
-                textBoxelso.Text = "nincs adat";
-                textBoxutolso.Text = "nincs adat";
-                textBoxvaltozas.Text = "nincs adat";
-                tbvalto.Text = "nincs adat";
-                tbszam.ReadOnly = true;
-                ArfolyamChart.Visible = false;
-                dataGridView2.Visible = false;
-                dataGridView3.Visible = false;
-                labelKiug.Visible = false;
-                labelKiugro.Visible = false;
-                labelMagas.Visible = false;
-                labelAlacsony.Visible = false;
-            }
-
-        }
         //valtas
         private void Tbszam_TextChanged(object sender, EventArgs e)
         {
@@ -387,6 +279,115 @@ namespace Projekt_paa3zx
         private void Timer7_Tick(object sender, EventArgs e)
         {
             labelIdo.Text = DateTime.Now.ToString("yyyy.MM.dd HH:mm:ss");
+        }
+
+        private void DataGridView1_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2 && Convert.ToInt32(e.Value) != 0)
+            {
+                tbszam.ReadOnly = false;
+                ArfolyamChart.Visible = true;
+                dataGridView2.Visible = true;
+                dataGridView3.Visible = true;
+                labelKiug.Visible = true;
+                labelKiugro.Visible = true;
+                labelMagas.Visible = true;
+                labelAlacsony.Visible = true;
+
+                decimal osszegzes = (from elem in Rates select elem.Value).Sum();
+                decimal db = dataGridView1.Rows.Count;
+                decimal atlag = osszegzes / db;
+                textBoxtlag.Text = String.Format("{0:N2}", atlag);
+
+                decimal max = (from elem in Rates select elem.Value).Max();
+                textBoxmax.Text = max.ToString();
+                decimal min = (from elem in Rates select elem.Value).Min();
+                textBoxmin.Text = min.ToString();
+
+
+                decimal elso = (from elem in Rates select elem.Value).First();
+                decimal uccso = (from elem in Rates select elem.Value).Last();
+                textBoxelso.Text = elso.ToString();
+                textBoxutolso.Text = uccso.ToString();
+
+
+                decimal valtozas = ((elso / uccso) - 1) * 100;
+                textBoxvaltozas.Text = String.Format("{0:N2}", valtozas) + " %";
+
+                tbvalto.Text = elso.ToString();
+
+
+                //szinezes
+                int ertek = Convert.ToInt32(e.Value);
+                if (ertek < atlag)
+                {
+                    e.CellStyle.BackColor = Color.LightGreen;
+                }
+                if (ertek > atlag)
+                {
+                    e.CellStyle.BackColor = Color.Red;
+                }
+                if (valtozas > 0)
+                {
+                    textBoxvaltozas.BackColor = Color.Red;
+                }
+                if (valtozas < 0)
+                {
+                    textBoxvaltozas.BackColor = Color.LightGreen;
+                }
+
+                //kiugro ertekek vizsgalata
+                double szorzo = 1.05;
+                decimal kiugromagas = atlag * Convert.ToDecimal(szorzo);
+                decimal kiugroalacsony = atlag / Convert.ToDecimal(szorzo);
+                textBox1.Text = kiugromagas.ToString();
+                textBox2.Text = kiugroalacsony.ToString();
+
+                var masik = (from elem in Rates
+                             where
+                             elem.Value > kiugromagas
+                             select elem).ToList();
+                var harmadik = (from elem in Rates
+                                where
+                                 elem.Value < kiugroalacsony
+                                select elem).ToList();
+                dataGridView2.DataSource = masik;
+                dataGridView3.DataSource = harmadik;
+                if (dataGridView2.Rows.Count == 0)
+                {
+                    dataGridView2.Visible = false;
+                }
+                if (dataGridView3.Rows.Count == 0)
+                {
+                    dataGridView3.Visible = false;
+                }
+                if (dateTimePickerkezdo.Value >= dateTimePickerveg.Value)
+                {
+                    ArfolyamChart.Visible = false;
+                }
+            }
+
+
+            //hibakezeles
+            if (e.ColumnIndex == 2 && Convert.ToInt32(e.Value) == 0)
+            {
+
+                textBoxtlag.Text = "nincs adat";
+                textBoxmax.Text = "nincs adat";
+                textBoxmin.Text = "nincs adat";
+                textBoxelso.Text = "nincs adat";
+                textBoxutolso.Text = "nincs adat";
+                textBoxvaltozas.Text = "nincs adat";
+                tbvalto.Text = "nincs adat";
+                tbszam.ReadOnly = true;
+                ArfolyamChart.Visible = false;
+                dataGridView2.Visible = false;
+                dataGridView3.Visible = false;
+                labelKiug.Visible = false;
+                labelKiugro.Visible = false;
+                labelMagas.Visible = false;
+                labelAlacsony.Visible = false;
+            }
         }
     }
 }
