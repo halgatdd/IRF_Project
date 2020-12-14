@@ -93,6 +93,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(186, -1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(339, 885);
             this.dataGridView1.TabIndex = 0;
@@ -103,7 +104,7 @@
             this.dateTimePickerkezdo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerkezdo.Location = new System.Drawing.Point(9, 96);
             this.dateTimePickerkezdo.Name = "dateTimePickerkezdo";
-            this.dateTimePickerkezdo.Size = new System.Drawing.Size(121, 22);
+            this.dateTimePickerkezdo.Size = new System.Drawing.Size(121, 26);
             this.dateTimePickerkezdo.TabIndex = 1;
             this.dateTimePickerkezdo.Value = new System.DateTime(2020, 1, 10, 13, 32, 0, 0);
             this.dateTimePickerkezdo.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
@@ -113,7 +114,7 @@
             this.dateTimePickerveg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerveg.Location = new System.Drawing.Point(9, 189);
             this.dateTimePickerveg.Name = "dateTimePickerveg";
-            this.dateTimePickerveg.Size = new System.Drawing.Size(121, 22);
+            this.dateTimePickerveg.Size = new System.Drawing.Size(121, 26);
             this.dateTimePickerveg.TabIndex = 2;
             this.dateTimePickerveg.Value = new System.DateTime(2020, 12, 1, 13, 32, 0, 0);
             this.dateTimePickerveg.ValueChanged += new System.EventHandler(this.DateTimePicker2_ValueChanged);
@@ -123,7 +124,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 268);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(77, 24);
+            this.comboBox1.Size = new System.Drawing.Size(77, 28);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
@@ -146,14 +147,14 @@
             this.ArfolyamChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.ArfolyamChart.Legends.Add(legend1);
-            this.ArfolyamChart.Location = new System.Drawing.Point(570, -1);
+            this.ArfolyamChart.Location = new System.Drawing.Point(821, -1);
             this.ArfolyamChart.Name = "ArfolyamChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.ArfolyamChart.Series.Add(series1);
-            this.ArfolyamChart.Size = new System.Drawing.Size(1222, 319);
+            this.ArfolyamChart.Size = new System.Drawing.Size(971, 297);
             this.ArfolyamChart.TabIndex = 5;
             this.ArfolyamChart.Text = "chart1";
             // 
@@ -163,7 +164,7 @@
             this.labelatlag.AutoSize = true;
             this.labelatlag.Location = new System.Drawing.Point(1649, 646);
             this.labelatlag.Name = "labelatlag";
-            this.labelatlag.Size = new System.Drawing.Size(44, 16);
+            this.labelatlag.Size = new System.Drawing.Size(52, 20);
             this.labelatlag.TabIndex = 6;
             this.labelatlag.Text = "Átlag";
             // 
@@ -173,7 +174,7 @@
             this.labelmax.AutoSize = true;
             this.labelmax.Location = new System.Drawing.Point(1560, 675);
             this.labelmax.Name = "labelmax";
-            this.labelmax.Size = new System.Drawing.Size(134, 16);
+            this.labelmax.Size = new System.Drawing.Size(157, 20);
             this.labelmax.TabIndex = 7;
             this.labelmax.Text = "Legnagyobb érték";
             // 
@@ -183,7 +184,7 @@
             this.labelmin.AutoSize = true;
             this.labelmin.Location = new System.Drawing.Point(1533, 703);
             this.labelmin.Name = "labelmin";
-            this.labelmin.Size = new System.Drawing.Size(163, 16);
+            this.labelmin.Size = new System.Drawing.Size(192, 20);
             this.labelmin.TabIndex = 8;
             this.labelmin.Text = "Legalacsonyabb érték";
             // 
@@ -193,7 +194,7 @@
             this.labelvaltozas.AutoSize = true;
             this.labelvaltozas.Location = new System.Drawing.Point(1569, 815);
             this.labelvaltozas.Name = "labelvaltozas";
-            this.labelvaltozas.Size = new System.Drawing.Size(128, 16);
+            this.labelvaltozas.Size = new System.Drawing.Size(154, 20);
             this.labelvaltozas.TabIndex = 11;
             this.labelvaltozas.Text = "Időszaki változás";
             // 
@@ -203,7 +204,7 @@
             this.labelutolso.AutoSize = true;
             this.labelutolso.Location = new System.Drawing.Point(1569, 787);
             this.labelutolso.Name = "labelutolso";
-            this.labelutolso.Size = new System.Drawing.Size(127, 16);
+            this.labelutolso.Size = new System.Drawing.Size(150, 20);
             this.labelutolso.TabIndex = 10;
             this.labelutolso.Text = "Legrégebbi érték";
             // 
@@ -213,7 +214,7 @@
             this.labelelso.AutoSize = true;
             this.labelelso.Location = new System.Drawing.Point(1569, 755);
             this.labelelso.Name = "labelelso";
-            this.labelelso.Size = new System.Drawing.Size(126, 16);
+            this.labelelso.Size = new System.Drawing.Size(149, 20);
             this.labelelso.TabIndex = 9;
             this.labelelso.Text = "Legkorábbi érték";
             // 
@@ -226,7 +227,7 @@
             this.textBoxtlag.Location = new System.Drawing.Point(1699, 640);
             this.textBoxtlag.Name = "textBoxtlag";
             this.textBoxtlag.ReadOnly = true;
-            this.textBoxtlag.Size = new System.Drawing.Size(80, 22);
+            this.textBoxtlag.Size = new System.Drawing.Size(80, 26);
             this.textBoxtlag.TabIndex = 12;
             // 
             // textBoxmax
@@ -238,7 +239,7 @@
             this.textBoxmax.Location = new System.Drawing.Point(1699, 669);
             this.textBoxmax.Name = "textBoxmax";
             this.textBoxmax.ReadOnly = true;
-            this.textBoxmax.Size = new System.Drawing.Size(80, 22);
+            this.textBoxmax.Size = new System.Drawing.Size(80, 26);
             this.textBoxmax.TabIndex = 13;
             // 
             // textBoxelso
@@ -250,7 +251,7 @@
             this.textBoxelso.Location = new System.Drawing.Point(1699, 749);
             this.textBoxelso.Name = "textBoxelso";
             this.textBoxelso.ReadOnly = true;
-            this.textBoxelso.Size = new System.Drawing.Size(80, 22);
+            this.textBoxelso.Size = new System.Drawing.Size(80, 26);
             this.textBoxelso.TabIndex = 15;
             // 
             // textBoxmin
@@ -262,7 +263,7 @@
             this.textBoxmin.Location = new System.Drawing.Point(1699, 697);
             this.textBoxmin.Name = "textBoxmin";
             this.textBoxmin.ReadOnly = true;
-            this.textBoxmin.Size = new System.Drawing.Size(80, 22);
+            this.textBoxmin.Size = new System.Drawing.Size(80, 26);
             this.textBoxmin.TabIndex = 14;
             // 
             // textBoxvaltozas
@@ -274,7 +275,7 @@
             this.textBoxvaltozas.Location = new System.Drawing.Point(1699, 809);
             this.textBoxvaltozas.Name = "textBoxvaltozas";
             this.textBoxvaltozas.ReadOnly = true;
-            this.textBoxvaltozas.Size = new System.Drawing.Size(80, 22);
+            this.textBoxvaltozas.Size = new System.Drawing.Size(80, 26);
             this.textBoxvaltozas.TabIndex = 17;
             // 
             // textBoxutolso
@@ -286,7 +287,7 @@
             this.textBoxutolso.Location = new System.Drawing.Point(1699, 781);
             this.textBoxutolso.Name = "textBoxutolso";
             this.textBoxutolso.ReadOnly = true;
-            this.textBoxutolso.Size = new System.Drawing.Size(80, 22);
+            this.textBoxutolso.Size = new System.Drawing.Size(80, 26);
             this.textBoxutolso.TabIndex = 16;
             // 
             // labelszamok
@@ -295,7 +296,7 @@
             this.labelszamok.AutoSize = true;
             this.labelszamok.Location = new System.Drawing.Point(1489, 616);
             this.labelszamok.Name = "labelszamok";
-            this.labelszamok.Size = new System.Drawing.Size(303, 16);
+            this.labelszamok.Size = new System.Drawing.Size(367, 20);
             this.labelszamok.TabIndex = 18;
             this.labelszamok.Text = "A kiválasztott időszakra vonatkozó adatok:";
             // 
@@ -305,7 +306,7 @@
             this.labelValto1.AutoSize = true;
             this.labelValto1.Location = new System.Drawing.Point(1113, 621);
             this.labelValto1.Name = "labelValto1";
-            this.labelValto1.Size = new System.Drawing.Size(44, 16);
+            this.labelValto1.Size = new System.Drawing.Size(52, 20);
             this.labelValto1.TabIndex = 19;
             this.labelValto1.Text = "Váltó";
             // 
@@ -318,7 +319,7 @@
             this.tbvalto.Location = new System.Drawing.Point(1174, 669);
             this.tbvalto.Name = "tbvalto";
             this.tbvalto.ReadOnly = true;
-            this.tbvalto.Size = new System.Drawing.Size(80, 22);
+            this.tbvalto.Size = new System.Drawing.Size(80, 26);
             this.tbvalto.TabIndex = 20;
             // 
             // label1
@@ -328,7 +329,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(1113, 637);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 16);
+            this.label1.Size = new System.Drawing.Size(482, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "(A váltó a jelenleg kijelölt időszak utolsó időpontját veszi alapul)";
             // 
@@ -337,7 +338,7 @@
             this.tbszam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tbszam.Location = new System.Drawing.Point(1174, 703);
             this.tbszam.Name = "tbszam";
-            this.tbszam.Size = new System.Drawing.Size(80, 22);
+            this.tbszam.Size = new System.Drawing.Size(80, 26);
             this.tbszam.TabIndex = 22;
             this.tbszam.Text = "0";
             this.tbszam.TextChanged += new System.EventHandler(this.Tbszam_TextChanged);
@@ -348,7 +349,7 @@
             this.eredmeny.Location = new System.Drawing.Point(1174, 749);
             this.eredmeny.Name = "eredmeny";
             this.eredmeny.ReadOnly = true;
-            this.eredmeny.Size = new System.Drawing.Size(80, 22);
+            this.eredmeny.Size = new System.Drawing.Size(80, 26);
             this.eredmeny.TabIndex = 23;
             // 
             // timer1
@@ -389,6 +390,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(283, 511);
             this.dataGridView2.TabIndex = 24;
             // 
@@ -406,6 +408,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.Size = new System.Drawing.Size(287, 511);
             this.dataGridView3.TabIndex = 25;
             // 
@@ -413,7 +416,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(570, 324);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 26;
             this.textBox1.Visible = false;
             // 
@@ -421,7 +424,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(820, 324);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 27;
             this.textBox2.Visible = false;
             // 
@@ -430,7 +433,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 28;
             this.label2.Text = "Kezdő dátum";
             // 
@@ -439,7 +442,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(5, 170);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 29;
             this.label3.Text = "Záró dátum";
             // 
@@ -448,7 +451,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(8, 249);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 16);
+            this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 30;
             this.label4.Text = "Pénznem";
             // 
@@ -459,7 +462,7 @@
             this.labelMagas.AutoSize = true;
             this.labelMagas.Location = new System.Drawing.Point(570, 349);
             this.labelMagas.Name = "labelMagas";
-            this.labelMagas.Size = new System.Drawing.Size(55, 16);
+            this.labelMagas.Size = new System.Drawing.Size(64, 20);
             this.labelMagas.TabIndex = 31;
             this.labelMagas.Text = "Magas";
             // 
@@ -470,7 +473,7 @@
             this.labelAlacsony.AutoSize = true;
             this.labelAlacsony.Location = new System.Drawing.Point(817, 349);
             this.labelAlacsony.Name = "labelAlacsony";
-            this.labelAlacsony.Size = new System.Drawing.Size(72, 16);
+            this.labelAlacsony.Size = new System.Drawing.Size(85, 20);
             this.labelAlacsony.TabIndex = 32;
             this.labelAlacsony.Text = "Alacsony";
             // 
@@ -481,7 +484,7 @@
             this.labelKiug.AutoSize = true;
             this.labelKiug.Location = new System.Drawing.Point(567, 302);
             this.labelKiug.Name = "labelKiug";
-            this.labelKiug.Size = new System.Drawing.Size(108, 16);
+            this.labelKiug.Size = new System.Drawing.Size(130, 20);
             this.labelKiug.TabIndex = 33;
             this.labelKiug.Text = "Kiugró értékek";
             // 
@@ -493,7 +496,7 @@
             this.labelKiugro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelKiugro.Location = new System.Drawing.Point(570, 321);
             this.labelKiugro.Name = "labelKiugro";
-            this.labelKiugro.Size = new System.Drawing.Size(296, 16);
+            this.labelKiugro.Size = new System.Drawing.Size(368, 20);
             this.labelKiugro.TabIndex = 34;
             this.labelKiugro.Text = "(Kijelölt időszakban 5%-ot meghaladó eltérések)";
             // 
@@ -506,13 +509,13 @@
             this.labelIdo.AutoSize = true;
             this.labelIdo.Location = new System.Drawing.Point(5, -1);
             this.labelIdo.Name = "labelIdo";
-            this.labelIdo.Size = new System.Drawing.Size(30, 16);
+            this.labelIdo.Size = new System.Drawing.Size(34, 20);
             this.labelIdo.TabIndex = 35;
             this.labelIdo.Text = "Ido";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1792, 884);

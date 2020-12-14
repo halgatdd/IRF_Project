@@ -42,7 +42,8 @@ namespace Projekt_paa3zx
             timer4.Interval = 8000;
             timer5.Interval = 10000;
             timer6.Interval = 12000;
-
+            panelka p = new panelka();
+            Controls.Add(p);
             GetCurrencies();
             RefreshData();
         }
