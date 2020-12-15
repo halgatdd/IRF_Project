@@ -13,13 +13,13 @@ using System.Xml;
 using Projekt_paa3zx.MNBServiceReference;
 
 namespace Projekt_paa3zx
-{
+{   //Az ikon forrása: https://www.iconarchive.com/tag/chart
     public partial class Form1 : Form
     {
         BindingList<Adatok> Rates = new BindingList<Adatok>();
         BindingList<string> Currencies = new BindingList<string>();
 
-
+        
         public Form1()
         {
 
@@ -308,7 +308,7 @@ namespace Projekt_paa3zx
                 decimal elso = (from elem in Rates select elem.Value).First();
                 decimal uccso = (from elem in Rates select elem.Value).Last();
                 textBoxelso.Text = elso.ToString();
-                textBoxutolso.Text = uccso.ToString();
+                textBoxutolso.Text = String.Format("{0:N2}", uccso);
 
 
                 decimal valtozas = ((elso / uccso) - 1) * 100;

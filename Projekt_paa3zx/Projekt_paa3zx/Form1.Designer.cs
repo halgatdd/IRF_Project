@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dateTimePickerkezdo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerveg = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -66,19 +67,19 @@
             this.timer7 = new System.Windows.Forms.Timer(this.components);
             this.labelIdo = new System.Windows.Forms.Label();
             this.ArfolyamChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView1 = new Projekt_paa3zx.DGV();
-            this.dataGridView2 = new Projekt_paa3zx.DGV();
-            this.dataGridView3 = new Projekt_paa3zx.DGV();
-            this.textBoxtlag = new Projekt_paa3zx.Tbs();
-            this.textBoxmax = new Projekt_paa3zx.Tbs();
-            this.textBoxmin = new Projekt_paa3zx.Tbs();
-            this.textBoxelso = new Projekt_paa3zx.Tbs();
-            this.textBoxutolso = new Projekt_paa3zx.Tbs();
             this.textBoxvaltozas = new Projekt_paa3zx.Tbs();
+            this.textBoxutolso = new Projekt_paa3zx.Tbs();
+            this.textBoxelso = new Projekt_paa3zx.Tbs();
+            this.textBoxmin = new Projekt_paa3zx.Tbs();
+            this.textBoxmax = new Projekt_paa3zx.Tbs();
+            this.textBoxtlag = new Projekt_paa3zx.Tbs();
+            this.dataGridView3 = new Projekt_paa3zx.DGV();
+            this.dataGridView2 = new Projekt_paa3zx.DGV();
+            this.dataGridView1 = new Projekt_paa3zx.DGV();
             ((System.ComponentModel.ISupportInitialize)(this.ArfolyamChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePickerkezdo
@@ -351,9 +352,9 @@
             this.labelKiugro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelKiugro.Location = new System.Drawing.Point(567, 340);
             this.labelKiugro.Name = "labelKiugro";
-            this.labelKiugro.Size = new System.Drawing.Size(296, 16);
+            this.labelKiugro.Size = new System.Drawing.Size(367, 16);
             this.labelKiugro.TabIndex = 34;
-            this.labelKiugro.Text = "(Kijelölt időszakban 5%-ot meghaladó eltérések)";
+            this.labelKiugro.Text = "(Kijelölt időszakban átlagtól vett 5%-ot meghaladó eltérések)";
             // 
             // timer7
             // 
@@ -372,50 +373,85 @@
             // ArfolyamChart
             // 
             this.ArfolyamChart.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.ArfolyamChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.ArfolyamChart.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.ArfolyamChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ArfolyamChart.Legends.Add(legend1);
             this.ArfolyamChart.Location = new System.Drawing.Point(570, 13);
             this.ArfolyamChart.Name = "ArfolyamChart";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.ArfolyamChart.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ArfolyamChart.Series.Add(series1);
             this.ArfolyamChart.Size = new System.Drawing.Size(1222, 300);
             this.ArfolyamChart.TabIndex = 37;
             this.ArfolyamChart.Text = "chart1";
             // 
-            // dataGridView1
+            // textBoxvaltozas
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(156, -1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 1062);
-            this.dataGridView1.TabIndex = 38;
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGridView1_CellFormatting_1);
+            this.textBoxvaltozas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxvaltozas.BackColor = System.Drawing.Color.White;
+            this.textBoxvaltozas.ForeColor = System.Drawing.Color.Black;
+            this.textBoxvaltozas.Location = new System.Drawing.Point(1668, 987);
+            this.textBoxvaltozas.Name = "textBoxvaltozas";
+            this.textBoxvaltozas.ReadOnly = true;
+            this.textBoxvaltozas.Size = new System.Drawing.Size(100, 22);
+            this.textBoxvaltozas.TabIndex = 46;
             // 
-            // dataGridView2
+            // textBoxutolso
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(506, 386);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(292, 663);
-            this.dataGridView2.TabIndex = 39;
+            this.textBoxutolso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxutolso.BackColor = System.Drawing.Color.Black;
+            this.textBoxutolso.ForeColor = System.Drawing.Color.White;
+            this.textBoxutolso.Location = new System.Drawing.Point(1668, 956);
+            this.textBoxutolso.Name = "textBoxutolso";
+            this.textBoxutolso.ReadOnly = true;
+            this.textBoxutolso.Size = new System.Drawing.Size(100, 22);
+            this.textBoxutolso.TabIndex = 45;
+            // 
+            // textBoxelso
+            // 
+            this.textBoxelso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxelso.BackColor = System.Drawing.Color.Black;
+            this.textBoxelso.ForeColor = System.Drawing.Color.White;
+            this.textBoxelso.Location = new System.Drawing.Point(1668, 927);
+            this.textBoxelso.Name = "textBoxelso";
+            this.textBoxelso.ReadOnly = true;
+            this.textBoxelso.Size = new System.Drawing.Size(100, 22);
+            this.textBoxelso.TabIndex = 44;
+            // 
+            // textBoxmin
+            // 
+            this.textBoxmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxmin.BackColor = System.Drawing.Color.Black;
+            this.textBoxmin.ForeColor = System.Drawing.Color.White;
+            this.textBoxmin.Location = new System.Drawing.Point(1668, 875);
+            this.textBoxmin.Name = "textBoxmin";
+            this.textBoxmin.ReadOnly = true;
+            this.textBoxmin.Size = new System.Drawing.Size(100, 22);
+            this.textBoxmin.TabIndex = 43;
+            // 
+            // textBoxmax
+            // 
+            this.textBoxmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxmax.BackColor = System.Drawing.Color.Black;
+            this.textBoxmax.ForeColor = System.Drawing.Color.White;
+            this.textBoxmax.Location = new System.Drawing.Point(1668, 847);
+            this.textBoxmax.Name = "textBoxmax";
+            this.textBoxmax.ReadOnly = true;
+            this.textBoxmax.Size = new System.Drawing.Size(100, 22);
+            this.textBoxmax.TabIndex = 42;
+            // 
+            // textBoxtlag
+            // 
+            this.textBoxtlag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxtlag.BackColor = System.Drawing.Color.Black;
+            this.textBoxtlag.ForeColor = System.Drawing.Color.White;
+            this.textBoxtlag.Location = new System.Drawing.Point(1668, 821);
+            this.textBoxtlag.Name = "textBoxtlag";
+            this.textBoxtlag.ReadOnly = true;
+            this.textBoxtlag.Size = new System.Drawing.Size(100, 22);
+            this.textBoxtlag.TabIndex = 41;
             // 
             // dataGridView3
             // 
@@ -432,71 +468,36 @@
             this.dataGridView3.Size = new System.Drawing.Size(292, 663);
             this.dataGridView3.TabIndex = 40;
             // 
-            // textBoxtlag
+            // dataGridView2
             // 
-            this.textBoxtlag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxtlag.BackColor = System.Drawing.Color.Black;
-            this.textBoxtlag.ForeColor = System.Drawing.Color.White;
-            this.textBoxtlag.Location = new System.Drawing.Point(1668, 821);
-            this.textBoxtlag.Name = "textBoxtlag";
-            this.textBoxtlag.ReadOnly = true;
-            this.textBoxtlag.Size = new System.Drawing.Size(100, 22);
-            this.textBoxtlag.TabIndex = 41;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(506, 386);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(292, 663);
+            this.dataGridView2.TabIndex = 39;
             // 
-            // textBoxmax
+            // dataGridView1
             // 
-            this.textBoxmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxmax.BackColor = System.Drawing.Color.Black;
-            this.textBoxmax.ForeColor = System.Drawing.Color.White;
-            this.textBoxmax.Location = new System.Drawing.Point(1668, 847);
-            this.textBoxmax.Name = "textBoxmax";
-            this.textBoxmax.ReadOnly = true;
-            this.textBoxmax.Size = new System.Drawing.Size(100, 22);
-            this.textBoxmax.TabIndex = 42;
-            // 
-            // textBoxmin
-            // 
-            this.textBoxmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxmin.BackColor = System.Drawing.Color.Black;
-            this.textBoxmin.ForeColor = System.Drawing.Color.White;
-            this.textBoxmin.Location = new System.Drawing.Point(1668, 875);
-            this.textBoxmin.Name = "textBoxmin";
-            this.textBoxmin.ReadOnly = true;
-            this.textBoxmin.Size = new System.Drawing.Size(100, 22);
-            this.textBoxmin.TabIndex = 43;
-            // 
-            // textBoxelso
-            // 
-            this.textBoxelso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxelso.BackColor = System.Drawing.Color.Black;
-            this.textBoxelso.ForeColor = System.Drawing.Color.White;
-            this.textBoxelso.Location = new System.Drawing.Point(1668, 927);
-            this.textBoxelso.Name = "textBoxelso";
-            this.textBoxelso.ReadOnly = true;
-            this.textBoxelso.Size = new System.Drawing.Size(100, 22);
-            this.textBoxelso.TabIndex = 44;
-            // 
-            // textBoxutolso
-            // 
-            this.textBoxutolso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxutolso.BackColor = System.Drawing.Color.Black;
-            this.textBoxutolso.ForeColor = System.Drawing.Color.White;
-            this.textBoxutolso.Location = new System.Drawing.Point(1668, 956);
-            this.textBoxutolso.Name = "textBoxutolso";
-            this.textBoxutolso.ReadOnly = true;
-            this.textBoxutolso.Size = new System.Drawing.Size(100, 22);
-            this.textBoxutolso.TabIndex = 45;
-            // 
-            // textBoxvaltozas
-            // 
-            this.textBoxvaltozas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxvaltozas.BackColor = System.Drawing.Color.White;
-            this.textBoxvaltozas.ForeColor = System.Drawing.Color.Black;
-            this.textBoxvaltozas.Location = new System.Drawing.Point(1668, 987);
-            this.textBoxvaltozas.Name = "textBoxvaltozas";
-            this.textBoxvaltozas.ReadOnly = true;
-            this.textBoxvaltozas.Size = new System.Drawing.Size(100, 22);
-            this.textBoxvaltozas.TabIndex = 46;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(156, -1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(344, 1062);
+            this.dataGridView1.TabIndex = 38;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGridView1_CellFormatting_1);
             // 
             // Form1
             // 
@@ -542,13 +543,14 @@
             this.Controls.Add(this.dateTimePickerkezdo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Árfolyamelemző";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ArfolyamChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
